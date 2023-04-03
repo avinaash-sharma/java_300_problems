@@ -7,7 +7,7 @@ import java.util.LinkedList;
 
 //How do you reverse a singly linked list? How do you reverse a doubly linked list?
 
-//here the task it donw using Java Internal LinkedList API's
+//here the task it donw using Java Internal LinkedList API's and apperantly the API's provided by Java is capable of Doubly linkedlist by default
 class Node{
     int data;
     public Node(int data){
