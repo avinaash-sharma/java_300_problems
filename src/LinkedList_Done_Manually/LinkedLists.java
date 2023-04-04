@@ -30,7 +30,10 @@ public class LinkedLists {
         printLinkedListData();
         addAtLast(5);
         printLinkedListData();
-
+        removeData();
+        printLinkedListData();
+        reverseData();
+        printLinkedListData();
     }
 
     public static void addAtFirst(int data){
@@ -44,6 +47,41 @@ public class LinkedLists {
             newNode.next = head;
             head = newNode;
             return;
+        }
+
+    }
+
+    public static void reverseData(){
+        Node current = head;
+        Node previous = null;
+        Node next;
+        while(current != null) {
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current=next;
+        }
+        head = previous;
+
+    }
+
+    public static void removeData(){
+
+        if(head == null){
+            printMessage("Nothing to be deleted");
+            return;
+        }
+        else{
+            Node current = head;
+            Node previous = current;
+            while(current.next != null){
+                previous = current;
+                current = current.next;
+
+            }
+            if(current.next == null){
+                previous.next = null;
+            }
         }
 
     }
